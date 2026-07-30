@@ -131,9 +131,28 @@ body {
   fill: currentColor;
 }
 
-/* SECTION BASE */
+/* SECTION BASE & ANCHORS */
 section {
   padding: 96px 0;
+  position: relative;
+}
+
+.section-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  outline: none;
+  border: none;
+}
+
+*:focus, *:focus-visible, *:target {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .section-label {
