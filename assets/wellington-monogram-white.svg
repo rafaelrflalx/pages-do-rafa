@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Versão fundo escuro: WA branco sobre preto -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&amp;display=swap');
+    </style>
+  </defs>
+
+  <rect width="400" height="300" fill="#000000"/>
+
+  <!-- Monograma branco: W | linha | A -->
+  <text x="138" y="238"
+        font-family="'Cinzel', 'Trajan Pro', serif"
+        font-weight="600"
+        font-size="190"
+        fill="#FFFFFF"
+        text-anchor="middle">W</text>
+
+  <line x1="200" y1="52" x2="200" y2="246"
+        stroke="rgba(255,255,255,0.40)" stroke-width="1.2"/>
+
+  <text x="262" y="238"
+        font-family="'Cinzel', 'Trajan Pro', serif"
+        font-weight="600"
+        font-size="190"
+        fill="#FFFFFF"
+        text-anchor="middle">A</text>
+</svg>
