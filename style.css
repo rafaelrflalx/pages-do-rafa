@@ -426,6 +426,25 @@ h1.hero-title em {
   border-bottom: 1px solid var(--line);
 }
 
+.cases-category-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 40px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cases-category-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
 .cases {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -438,6 +457,79 @@ h1.hero-title em {
   border-radius: 12px;
   overflow: hidden;
   transition: var(--transition);
+}
+
+/* CASE FEATURED / PROJETO REAL */
+.case-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(145deg, #1B2140, #131833);
+  border: 1px solid rgba(201, 169, 106, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.case-featured:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(201, 169, 106, 0.2);
+}
+
+.case-featured-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+@media (max-width: 768px) {
+  .case-featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.case-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  color: #25D366;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #25D366;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.tech-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  background: rgba(242, 239, 233, 0.06);
+  border: 1px solid rgba(242, 239, 233, 0.12);
+  color: var(--parchment-muted);
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .case:hover {
