@@ -485,7 +485,7 @@ h1.hero-title em {
 }
 
 .case-logo-thumb {
-  background: linear-gradient(135deg, #0F1326 0%, #171E38 100%);
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -504,11 +504,11 @@ h1.hero-title em {
 
 .case-logo-thumb img {
   max-width: 85%;
-  max-height: 70px;
+  max-height: 75px;
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  filter: none;
   transition: var(--transition);
 }
 
