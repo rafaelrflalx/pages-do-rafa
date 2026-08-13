@@ -60,6 +60,92 @@ body {
   background: rgba(16, 20, 42, 0.92);
 }
 
+/* SCROLL REVEAL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE HAMBURGER BUTTON & DRAWER */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--parchment);
+  cursor: pointer;
+  padding: 8px;
+  z-index: 120;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-drawer {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 64px);
+  background: rgba(16, 20, 42, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 105;
+  padding: 32px 24px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.mobile-drawer.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobile-drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-nav-link {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--parchment);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  display: block;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .header .nav-cta {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-drawer {
+    display: block;
+  }
+}
+
 .nav-container {
   display: flex;
   align-items: center;
