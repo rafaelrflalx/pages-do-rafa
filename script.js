@@ -79,6 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Interactive Simulator Form Handler
+  const simularForm = document.getElementById('simularForm');
+  if (simularForm) {
+    simularForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nome = document.getElementById('simNome').value.trim();
+      const nicho = document.getElementById('simNicho').value;
+      const objetivo = document.getElementById('simObjetivo').value;
+
+      const mensagem = `Olá Rafa! Meu nome é ${nome}, atuo na área de ${nicho} e gostaria de um orçamento para uma landing page com foco em: ${objetivo}.`;
+      const url = `https://wa.me/5511992982199?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    });
+  }
+
   // Smooth scroll offset for fixed header
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
